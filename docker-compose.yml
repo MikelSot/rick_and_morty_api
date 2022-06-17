@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  sd_rick_and_morty_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sd_rick_and_morty_app:1.0
+    container_name: "rick_and_morty_container"
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/rick_and_morty_api
